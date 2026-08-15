@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shre Hari Prem Anandh — MSc AI · University of Sheffield</title>
+  <meta name="description" content="Shre Hari Prem Anandh — MSc Artificial Intelligence candidate at the University of Sheffield and AI Engineer Intern at NexCell Solutions. Peer-reviewed AI researcher building machine-learning systems that survive contact with production." />
+  <meta name="author" content="Shre Hari Prem Anandh" />
+  <meta property="og:title" content="Shre Hari Prem Anandh — a living research paper" />
+  <meta property="og:description" content="MSc AI @ Sheffield · AI Engineer Intern @ NexCell Solutions · IEEE CCPIS 2025 · Portfolio formatted as a preprint about its author." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shrehari.github.io/" />
+  <meta property="og:image" content="https://shrehari.github.io/assets/profile.jpg" />
+  <meta property="og:image:alt" content="Shre Hari Prem Anandh — MSc AI, University of Sheffield" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://shrehari.github.io/" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3efe6" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#131210" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23f3efe6'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-style='italic' font-weight='700' font-size='30' fill='%23bf3b0b' text-anchor='middle'%3ESH%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spline+Sans+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <script>
+    /* Pre-paint: apply saved theme before the stylesheet loads (no flash), and
+       gate reveal-hiding on JS actually running (no-JS visitors see everything). */
+    try {
+      var t = localStorage.getItem("shp-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "paper");
+      document.documentElement.dataset.theme = t;
+    } catch (e) {}
+    document.documentElement.classList.add("js");
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shre Hari Prem Anandh",
+    "email": "mailto:shrehari66@gmail.com",
+    "url": "https://shrehari.github.io/",
+    "image": "https://shrehari.github.io/assets/profile.jpg",
+    "jobTitle": "AI Engineer Intern",
+    "worksFor": { "@type": "Organization", "name": "NexCell Solutions" },
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Sheffield" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Anna University" },
+    "knowsAbout": ["Machine Learning", "LLM Agents", "Natural Language Processing", "Real-time Systems", "Speech Processing"],
+    "address": { "@type": "PostalAddress", "addressLocality": "Sheffield", "addressCountry": "GB" },
+    "sameAs": [
+      "https://www.linkedin.com/in/shrehari",
+      "https://github.com/ShreHari"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ TOP BAR ============ -->
+  <header class="topbar" id="top">
+    <a class="wordmark" href="#top">
+      <span class="wordmark-serif">Anandh,</span>
+      <span class="wordmark-mono">S.H.P.</span>
+    </a>
+    <nav class="topnav" aria-label="Primary">
+      <a href="#introduction" data-section="introduction">§01 Intro</a>
+      <a href="#experiments" data-section="experiments">§03 Experiments</a>
+      <a href="#results" data-section="results">§05 Results</a>
+      <a href="#references" data-section="references">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle">
+      <span class="theme-toggle-label">LAB LIGHTS</span>
+      <span class="theme-toggle-state" id="themeState">ON</span>
+    </button>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ============ §00 TITLE PAGE / HERO ============ -->
+    <section class="hero" id="titlepage">
+      <canvas id="neuralCanvas" class="neural-canvas" aria-hidden="true"></canvas>
+
+      <div class="hero-inner">
+        <p class="hero-eyebrow mono" id="decodeLine">PREPRINT&nbsp;·&nbsp;REV 2026.08&nbsp;·&nbsp;SHEFFIELD, UNITED KINGDOM</p>
+
+        <div class="hero-grid">
+          <div class="hero-main">
+            <h1 class="hero-name">
+              Shre&nbsp;Hari<br /><em>Prem&nbsp;Anandh</em>
+            </h1>
+            <p class="hero-papertitle">
+              <em>On building machine-learning systems that survive contact with production:</em> a longitudinal self-study.
+            </p>
+
+            <p class="hero-authors mono">
+              S. H. P. Anandh<sup>1,2,3</sup>&nbsp;&nbsp;·&nbsp;&nbsp;<sup>1</sup>University of Sheffield, MSc Artificial Intelligence&nbsp;&nbsp;·&nbsp;&nbsp;<sup>2</sup>NexCell Solutions (ConneX)&nbsp;&nbsp;·&nbsp;&nbsp;<sup>3</sup>formerly Hamiltonian Systems
+            </p>
+
+            <div class="abstract">
+              <h2 class="abstract-label mono">Abstract</h2>
+              <p>
+                MSc Artificial Intelligence candidate at the <strong>University of Sheffield</strong> (completing
+                September 2026) and currently <strong>AI Engineer Intern at NexCell Solutions</strong> — shipping
+                Python/FastAPI backend features for ConneX, a live AI receptionist and CRM platform for UK
+                letting agencies. <strong>Peer-reviewed IEEE author</strong> (CCPIS 2025) who consistently turns
+                rigorous experimentation into measurable outcomes — a <strong>25% reduction</strong> in
+                false-positive alerts, a <strong>20% drop</strong> in query latency, a <strong>38% relative F1
+                improvement</strong> on an extractive QA system, and <strong>top-3 retrieval accuracy above
+                85%</strong> on a RAG pipeline. Equally at home debugging neural networks, designing REST APIs,
+                and translating data-driven findings for non-technical audiences.
+              </p>
+              <p class="abstract-keywords mono">
+                <span class="kw-label">Keywords —</span> machine learning · LLM agents &amp; RAG · NLP &amp; transformers · real-time systems · backend engineering · speech &amp; audio · model evaluation
+              </p>
+            </div>
+
+            <div class="hero-meta">
+              <div class="meta-item">
+                <span class="meta-key mono">STATUS</span>
+                <span class="meta-val"><span class="pulse-dot" aria-hidden="true"></span>Available immediately — full-time roles</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-key mono">WORK AUTH</span>
+                <span class="meta-val">UK Student Visa — Graduate Route eligible on course completion</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-key mono">CORRESPONDENCE</span>
+                <span class="meta-val"><a href="mailto:shrehari66@gmail.com">shrehari66@gmail.com</a></span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-key mono">ARTIFACTS</span>
+                <span class="meta-val">
+                  <a href="https://github.com/ShreHari" target="_blank" rel="noopener">GitHub</a><span class="sep">/</span><a href="https://linkedin.com/in/shrehari" target="_blank" rel="noopener">LinkedIn</a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="hero-side">
+            <figure class="plate">
+              <div class="plate-frame">
+                <img src="assets/profile.jpg" alt="Portrait of Shre Hari Prem Anandh" id="profilePhoto"
+                     width="800" height="1000" decoding="async"
+                     onerror="this.closest('.plate-frame').classList.add('no-photo')" />
+                <div class="plate-fallback" aria-hidden="true">
+                  <span class="plate-initials">S.H.</span>
+                  <span class="plate-fallback-note mono">PLATE I — FIGURE OMITTED<br />FROM REVIEWER COPY</span>
+                </div>
+              </div>
+              <figcaption class="mono">PLATE I — The author. Sheffield, 2026.</figcaption>
+            </figure>
+
+            <div class="stamps" aria-hidden="true">
+              <span class="stamp stamp-1">IEEE · CCPIS · 2025</span>
+              <span class="stamp stamp-2">PEER-REVIEWED HUMAN</span>
+            </div>
+
+            <nav class="toc" aria-label="Table of contents">
+              <h2 class="toc-title mono">Contents</h2>
+              <ol class="toc-list">
+                <li><a href="#introduction"><span class="toc-name">Introduction</span><span class="toc-dots"></span><span class="toc-num mono">§01</span></a></li>
+                <li><a href="#method"><span class="toc-name">Apparatus &amp; Method</span><span class="toc-dots"></span><span class="toc-num mono">§02</span></a></li>
+                <li><a href="#experiments"><span class="toc-name">Experiments</span><span class="toc-dots"></span><span class="toc-num mono">§03</span></a></li>
+                <li><a href="#deployment"><span class="toc-name">Industrial Deployment</span><span class="toc-dots"></span><span class="toc-num mono">§04</span></a></li>
+                <li><a href="#results"><span class="toc-name">Headline Results</span><span class="toc-dots"></span><span class="toc-num mono">§05</span></a></li>
+                <li><a href="#training"><span class="toc-name">Training &amp; Credentials</span><span class="toc-dots"></span><span class="toc-num mono">§06</span></a></li>
+                <li><a href="#recognition"><span class="toc-name">Recognition &amp; Service</span><span class="toc-dots"></span><span class="toc-num mono">§07</span></a></li>
+                <li><a href="#aistack"><span class="toc-name">AI-Native Workflow</span><span class="toc-dots"></span><span class="toc-num mono">§08</span></a></li>
+                <li><a href="#futurework"><span class="toc-name">Future Work</span><span class="toc-dots"></span><span class="toc-num mono">§09</span></a></li>
+                <li><a href="#references"><span class="toc-name">References &amp; Contact</span><span class="toc-dots"></span><span class="toc-num mono">§10</span></a></li>
+              </ol>
+            </nav>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ METRICS TICKER ============ -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" id="tickerTrack">
+        <span>25% ↓ false-positive alerts</span><span class="tick-sep">◆</span>
+        <span>+38% relative F1 on extractive QA</span><span class="tick-sep">◆</span>
+        <span>100,000+ records/week — Hamiltonian, 2024</span><span class="tick-sep">◆</span>
+        <span>20% ↓ query latency</span><span class="tick-sep">◆</span>
+        <span>98.2% speaking-speed accuracy</span><span class="tick-sep">◆</span>
+        <span>40% ↓ model evaluation time</span><span class="tick-sep">◆</span>
+        <span>IEEE CCPIS 2025 — peer-reviewed</span><span class="tick-sep">◆</span>
+        <span>sub-second edge inference on Raspberry Pi</span><span class="tick-sep">◆</span>
+        <span>World Space Week 2023 — 1st place, ISRO SDSC SHAR</span><span class="tick-sep">◆</span>
+        <span>Smart India Hackathon finalist</span><span class="tick-sep">◆</span><span class="tick-sep">◆</span>
+      </div>
+    </div>
+
+    <!-- ============ §01 INTRODUCTION ============ -->
+    <section class="section" id="introduction">
+      <div class="section-rail">
+        <span class="section-no mono">§01</span>
+        <h2 class="section-title">Introduction</h2>
+      </div>
+      <div class="section-body">
+        <p class="lede reveal">
+          Most machine-learning projects die in a notebook. <em>Mine are built to leave it.</em>
+        </p>
+        <div class="prose reveal">
+          <p>
+            I'm Shre Hari — an MSc Artificial Intelligence candidate at the University of Sheffield with a
+            particular obsession: the unglamorous gap between a promising model and a system people actually
+            rely on. I work both sides of that gap — currently as an AI Engineer Intern at NexCell Solutions,
+            building the backend of ConneX, a live AI receptionist and CRM platform for UK letting agencies;
+            previously engineering production backends at Hamiltonian Systems that moved 100,000+ records a
+            week; and writing peer-reviewed research on real-time disease monitoring, accepted at the 2nd IEEE
+            International Conference on Circuits, Power and Intelligent Systems (CCPIS 2025).
+          </p>
+          <p>
+            My favourite results rarely come from swapping in a bigger model. They come from
+            <strong>structured error analysis</strong> — like discovering that intra-sentence boundary truncation,
+            not model capacity, was throttling an extractive QA system, and lifting test-set F1 from 0.50 to 0.69
+            with targeted scoring adjustments. Diagnosis before replacement. Evidence before opinion.
+          </p>
+          <p>
+            I'm completing my MSc in Sheffield this September — deep learning, NLP, speech &amp; audio
+            processing, and scalable systems — and available immediately, full-time, for a team whose hard
+            problems deserve that kind of stubbornness.
+          </p>
+        </div>
+        <aside class="margin-note mono reveal">
+          <span class="margin-note-marker">*</span> Field notes: Python since day one · debugger before oracle · graphs over adjectives
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ §02 APPARATUS & METHOD ============ -->
+    <section class="section" id="method">
+      <div class="section-rail">
+        <span class="section-no mono">§02</span>
+        <h2 class="section-title">Apparatus &amp; Method</h2>
+        <p class="section-sub">The instruments on my bench — each one used in anger, not just listed.</p>
+      </div>
+      <div class="section-body">
+        <div class="tool-grid">
+          <div class="tool-group reveal">
+            <h3 class="tool-cat mono">A. LANGUAGES</h3>
+            <ul class="chips">
+              <li class="chip chip-strong">Python (primary — every experiment below)</li>
+              <li class="chip">SQL — PostgreSQL · MySQL</li>
+              <li class="chip">Java</li>
+              <li class="chip">C</li>
+              <li class="chip">Bash</li>
+            </ul>
+          </div>
+          <div class="tool-group reveal">
+            <h3 class="tool-cat mono">B. DATA &amp; ML LIBRARIES</h3>
+            <ul class="chips">
+              <li class="chip">PyTorch</li>
+              <li class="chip">TensorFlow / Keras</li>
+              <li class="chip">Scikit-learn</li>
+              <li class="chip">JAX</li>
+              <li class="chip">Pandas · NumPy</li>
+              <li class="chip">OpenCV</li>
+              <li class="chip">Matplotlib · Seaborn</li>
+            </ul>
+          </div>
+          <div class="tool-group reveal">
+            <h3 class="tool-cat mono">C. NLP &amp; TRANSFORMERS</h3>
+            <ul class="chips">
+              <li class="chip">HuggingFace Transformers</li>
+              <li class="chip">RoBERTa</li>
+              <li class="chip">Extractive QA</li>
+              <li class="chip">Sentiment Analysis</li>
+              <li class="chip">Text Chunking &amp; Retrieval</li>
+              <li class="chip">NLTK</li>
+            </ul>
+          </div>
+          <div class="tool-group reveal">
+            <h3 class="tool-cat mono">D. ML TECHNIQUES</h3>
+            <ul class="chips">
+              <li class="chip">CNNs</li>
+              <li class="chip">SVMs</li>
+              <li class="chip">Autoencoders</li>
+              <li class="chip">K-Means · PCA · t-SNE</li>
+              <li class="chip">ARIMA Forecasting</li>
+              <li class="chip">Anomaly Detection</li>
+              <li class="chip">Feature Engineering</li>
+              <li class="chip">Hyperparameter Tuning</li>
+            </ul>
+          </div>
+          <div class="tool-group reveal">
+            <h3 class="tool-cat mono">E. MODEL EVALUATION</h3>
+            <ul class="chips">
+              <li class="chip">Cross-validation</li>
+              <li class="chip">F1 · Precision · Recall</li>
+              <li class="chip">AUC-ROC</li>
+              <li class="chip">Confusion Matrices</li>
+              <li class="chip">Adjusted Rand Index</li>
+              <li class="chip">Confidence Intervals</li>
+            </ul>
+          </div>
+          <div class="tool-group reveal">
+            <h3 class="tool-cat mono">F. BACKEND &amp; APIS</h3>
+            <ul class="chips">
+              <li class="chip">FastAPI</li>
+              <li class="chip">Flask</li>
+              <li class="chip">REST design</li>
+              <li class="chip">Pydantic</li>
+              <li class="chip">JWT Auth</li>
+              <li class="chip">SQLModel · SQLAlchemy (async)</li>
+              <li class="chip">Microservices</li>
+            </ul>
+          </div>
+          <div class="tool-group reveal">
+            <h3 class="tool-cat mono">G. INFRASTRUCTURE</h3>
+            <ul class="chips">
+              <li class="chip">Docker</li>
+              <li class="chip">Git / GitHub</li>
+              <li class="chip">Linux (Ubuntu)</li>
+              <li class="chip">AWS fundamentals</li>
+              <li class="chip">CI/CD</li>
+              <li class="chip">Grafana</li>
+              <li class="chip">Structured logging</li>
+            </ul>
+          </div>
+          <div class="tool-group reveal">
+            <h3 class="tool-cat mono">H. PRACTICE</h3>
+            <ul class="chips">
+              <li class="chip">Agile / Scrum</li>
+              <li class="chip">Sprint planning</li>
+              <li class="chip">Technical documentation</li>
+              <li class="chip">Stakeholder communication</li>
+              <li class="chip">Root-cause analysis</li>
+            </ul>
+          </div>
+          <div class="tool-group reveal">
+            <h3 class="tool-cat mono">I. LLMS &amp; AGENTS</h3>
+            <ul class="chips">
+              <li class="chip">LLM APIs — Claude · OpenAI</li>
+              <li class="chip">Tool use &amp; function calling</li>
+              <li class="chip">MCP servers</li>
+              <li class="chip">Structured outputs</li>
+              <li class="chip">LangChain / LangGraph</li>
+              <li class="chip">RAG &amp; vector search</li>
+              <li class="chip">Embeddings</li>
+              <li class="chip">Prompt &amp; context engineering</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ §03 EXPERIMENTS ============ -->
+    <section class="section" id="experiments">
+      <div class="section-rail">
+        <span class="section-no mono">§03</span>
+        <h2 class="section-title">Experiments</h2>
+        <p class="section-sub">Ten systems. Every claim below shipped with a number attached.</p>
+      </div>
+      <div class="section-body">
+
+        <!-- Featured experiment — MSc dissertation -->
+        <article class="exp exp-featured reveal">
+          <div class="exp-head">
+            <span class="exp-no mono">EXP.08</span>
+            <span class="exp-year mono">2026</span>
+            <span class="stamp stamp-inline">MSC DISSERTATION · RESULTS SEP 2026</span>
+          </div>
+          <h3 class="exp-title">Visualising Emotion — Can a Text-to-Image Model Draw a Feeling?</h3>
+          <div class="exp-cols">
+            <div class="exp-desc">
+              <p>
+                1,012 public self-reports of emotion (anonymised, names redacted), typed at a Sheffield
+                engagement event and rendered by DALL·E as colour-free line drawings. Rather than forcing a
+                vision model to guess feelings, the pipeline <strong>describes each image in neutral
+                terms</strong> (BLIP visual-question answering), reads the descriptions with zero-shot NLI,
+                extracts prompt emotion with GoEmotions, and scores prompt–image agreement on a ladder of
+                metrics against a 300-shuffle permutation null.
+              </p>
+              <p class="exp-pub mono">
+                ⤷ Method result: describe-then-extract doubles emotion-family agreement over direct VLM classification. Human-rater validation drafted; final results September 2026.
+              </p>
+              <ul class="tags mono">
+                <li>GoEmotions</li><li>BLIP · Zero-shot NLI</li><li>CLIP</li><li>Permutation Testing</li>
+              </ul>
+            </div>
+            <div class="exp-metrics">
+              <div class="metric">
+                <span class="metric-big">1,012</span>
+                <span class="metric-label mono">TEXT–IMAGE PAIRS ANALYSED</span>
+              </div>
+              <div class="metric">
+                <span class="metric-big">74<span class="metric-unit">%</span> vs 43<span class="metric-unit">%</span></span>
+                <span class="metric-label mono">FACES vs SCENES MATCHING PROMPT EMOTION</span>
+              </div>
+            </div>
+          </div>
+          <p class="figcap mono">Fig. 3.0 — A model can draw a feeling on a face. Landscapes keep their secrets.</p>
+        </article>
+
+        <!-- Featured experiment -->
+        <article class="exp exp-featured reveal">
+          <div class="exp-head">
+            <span class="exp-no mono">EXP.01</span>
+            <span class="exp-year mono">2024</span>
+            <span class="stamp stamp-inline">IEEE · PEER-REVIEWED</span>
+          </div>
+          <h3 class="exp-title">Real-Time Disease Monitoring &amp; Agentic Alert Platform</h3>
+          <div class="exp-cols">
+            <div class="exp-desc">
+              <p>
+                Architected a distributed, real-time ingestion pipeline transforming multi-source public-health
+                streams into ML-ready datasets. Predictive models held <strong>sub-minute latency</strong> and raised
+                anomaly alerts within a 2–5&nbsp;minute window of statistical detection. Hybrid rule-based + ML alert
+                strategies were assessed through controlled experimentation across 50+ simulated scenarios.
+              </p>
+              <p class="exp-pub mono">
+                ⤷ Peer-reviewed and accepted at the 2nd IEEE International Conference on Circuits, Power and Intelligent Systems (CCPIS 2025) — <a href="#references">ref. [1]</a>.
+              </p>
+              <ul class="tags mono">
+                <li>Distributed Pipelines</li><li>Anomaly Detection</li><li>Agentic Alerts</li><li>Public Health</li>
+              </ul>
+            </div>
+            <div class="exp-metrics">
+              <div class="metric">
+                <span class="metric-big"><span data-count="25">25</span>%</span>
+                <span class="metric-label mono">↓ FALSE-POSITIVE ALERTS</span>
+              </div>
+              <div class="metric">
+                <span class="metric-big">2–5<span class="metric-unit">min</span></span>
+                <span class="metric-label mono">ANOMALY → ALERT WINDOW</span>
+              </div>
+            </div>
+          </div>
+          <p class="figcap mono">Fig. 3.1 — When the data is a live stream, "accurate" is nothing without "on time".</p>
+        </article>
+
+        <div class="exp-grid">
+
+          <article class="exp exp-card reveal">
+            <div class="exp-head">
+              <span class="exp-no mono">EXP.02</span>
+              <span class="exp-year mono">2025</span>
+            </div>
+            <h3 class="exp-title">Extractive Document QA System</h3>
+            <p class="exp-desc">
+              End-to-end QA pipeline on <code>roberta-base-squad2</code>: 300-word overlapping chunks and a custom
+              composite score blending model confidence, span-length reward and position-aware penalties. The win
+              came from <strong>error analysis, not model swaps</strong> — intra-sentence boundary truncation was the
+              primary failure mode.
+            </p>
+            <div class="metric metric-row">
+              <span class="metric-big">0.50 → 0.69</span>
+              <span class="metric-label mono">TEST-SET F1 (+38% REL.)</span>
+            </div>
+            <ul class="tags mono"><li>HuggingFace</li><li>RoBERTa</li><li>NLP</li></ul>
+            <p class="figcap mono">Fig. 3.2 — Diagnose before you replace.</p>
+          </article>
+
+          <article class="exp exp-card reveal">
+            <div class="exp-head">
+              <span class="exp-no mono">EXP.03</span>
+              <span class="exp-year mono">2025</span>
+            </div>
+            <h3 class="exp-title">Speech Rate Classification System</h3>
+            <p class="exp-desc">
+              Task-specific handcrafted features over log-mel filterbank energies — 128-dim spectral statistics for
+              speed, 256-dim temporal deltas for tempo — matched to each task's acoustic physics. SVM with RBF
+              kernel, 3-fold grid-search CV.
+            </p>
+            <div class="metric metric-row">
+              <span class="metric-big"><span data-count="98.2">98.2</span>%</span>
+              <span class="metric-label mono">SPEAKING-SPEED ACCURACY · kNN BASELINE 24.6%</span>
+            </div>
+            <ul class="tags mono"><li>SVM</li><li>Signal Processing</li><li>Audio DSP</li></ul>
+            <p class="figcap mono">Fig. 3.3 — Features engineered from first principles beat brute force ×4.</p>
+          </article>
+
+          <article class="exp exp-card reveal">
+            <div class="exp-head">
+              <span class="exp-no mono">EXP.04</span>
+              <span class="exp-year mono">2025</span>
+            </div>
+            <h3 class="exp-title">Medical Image Clustering — BloodMNIST</h3>
+            <p class="exp-desc">
+              Compressed 12,288-feature blood-cell images to 32 dimensions two ways: PCA versus a convolutional
+              autoencoder (MSE loss converging to 0.005 over 40 epochs). K-Means (k=8) over the learned latent
+              space, validated with t-SNE structure plots across all 8 cell categories.
+            </p>
+            <div class="metric metric-row">
+              <span class="metric-big">ARI 0.40</span>
+              <span class="metric-label mono">AUTOENCODER vs 0.26 FOR PCA</span>
+            </div>
+            <ul class="tags mono"><li>Autoencoders</li><li>K-Means</li><li>t-SNE</li></ul>
+            <p class="figcap mono">Fig. 3.4 — Learned geometry separates what variance alone cannot.</p>
+          </article>
+
+          <article class="exp exp-card reveal">
+            <div class="exp-head">
+              <span class="exp-no mono">EXP.05</span>
+              <span class="exp-year mono">2024</span>
+            </div>
+            <h3 class="exp-title">Time-Series Forecasting &amp; Automated Pipeline</h3>
+            <p class="exp-desc">
+              Modular Python pipeline automating ingestion → preprocessing → ARIMA modelling → PDF report
+              generation for agricultural market stakeholders, eliminating manual report assembly. A
+              reusable parallel experimentation framework produced explainable multi-year forecasts with annotated
+              confidence intervals.
+            </p>
+            <div class="metric metric-row">
+              <span class="metric-big"><span data-count="40">40</span>%</span>
+              <span class="metric-label mono">↓ MODEL EVALUATION TIME</span>
+            </div>
+            <ul class="tags mono"><li>ARIMA</li><li>Scikit-learn</li><li>Automation</li></ul>
+            <p class="figcap mono">Fig. 3.5 — The best report is the one nobody had to write.</p>
+          </article>
+
+          <article class="exp exp-card reveal">
+            <div class="exp-head">
+              <span class="exp-no mono">EXP.06</span>
+              <span class="exp-year mono">2025</span>
+            </div>
+            <h3 class="exp-title">UK Energy Grid — EDA &amp; Visualisation</h3>
+            <p class="exp-desc">
+              Analysed the UK's 2024 national electricity generation across six sources — solar, wind, gas,
+              nuclear, hydro, other — via time-series decomposition and correlation analysis. Surfaced seasonal
+              demand patterns and a statistically significant <strong>negative correlation between solar and wind
+              output</strong> during summer peak hours.
+            </p>
+            <div class="metric metric-row">
+              <span class="metric-big">6<span class="metric-unit">sources</span></span>
+              <span class="metric-label mono">GENERATION SOURCES · FULL-YEAR 2024</span>
+            </div>
+            <ul class="tags mono"><li>Pandas</li><li>Seaborn</li><li>Data Storytelling</li></ul>
+            <p class="figcap mono">Fig. 3.6 — Complex grid dynamics, readable by non-specialists.</p>
+          </article>
+
+          <article class="exp exp-card reveal">
+            <div class="exp-head">
+              <span class="exp-no mono">EXP.07</span>
+              <span class="exp-year mono">2023</span>
+              <span class="stamp stamp-inline">SIH FINALIST</span>
+            </div>
+            <h3 class="exp-title">Edge-Based Fish Disease Detection</h3>
+            <p class="exp-desc">
+              CNN classification pipeline trained on 2,000+ labelled images; F1 raised 12% through iterative
+              hyperparameter tuning and augmentation, then quantised and deployed on a Raspberry Pi. Recognised at
+              the Smart India Hackathon for potential to cut aquaculture losses by 25%.
+            </p>
+            <div class="metric metric-row">
+              <span class="metric-big">&lt;1<span class="metric-unit">sec</span></span>
+              <span class="metric-label mono">ON-DEVICE INFERENCE LATENCY</span>
+            </div>
+            <ul class="tags mono"><li>CNN</li><li>Edge AI</li><li>Quantisation</li></ul>
+            <p class="figcap mono">Fig. 3.7 — Real AI fits in a fisherman's pocket.</p>
+          </article>
+
+          <article class="exp exp-card reveal">
+            <div class="exp-head">
+              <span class="exp-no mono">EXP.09</span>
+              <span class="exp-year mono">2025</span>
+            </div>
+            <h3 class="exp-title">RAG-Enabled Housing Insight Chatbot</h3>
+            <p class="exp-desc">
+              End-to-end retrieval-augmented generation over property data: LangChain pipeline with
+              embedding-based semantic search, cosine-similarity ranking and modular prompt templates, served
+              behind a FastAPI endpoint with logging and hit-rate tracking — a <strong>reproducible base for
+              evaluating agent quality</strong>.
+            </p>
+            <div class="metric metric-row">
+              <span class="metric-big">&gt;85%</span>
+              <span class="metric-label mono">TOP-3 RETRIEVAL · 500+ CHUNKS INDEXED</span>
+            </div>
+            <ul class="tags mono"><li>LangChain</li><li>Vector Search</li><li>FastAPI</li></ul>
+            <p class="figcap mono">Fig. 3.8 — Retrieval you can measure beats generation you can only admire.</p>
+          </article>
+
+          <article class="exp exp-card reveal">
+            <div class="exp-head">
+              <span class="exp-no mono">EXP.10</span>
+              <span class="exp-year mono">2026</span>
+              <span class="stamp stamp-inline">LIVE DEMO</span>
+            </div>
+            <h3 class="exp-title">Aria — Voice-Driven Agentic Hotel Receptionist</h3>
+            <p class="exp-desc">
+              A voice receptionist running a <strong>hand-written agent loop</strong> — no framework — where
+              the LLM can only act on the world through a real <strong>MCP server</strong>: availability,
+              room search, booking, cancellation, FAQ. Every tool call surfaces in the UI as it happens, so
+              you can watch the agent think. FastAPI · Web Speech API · SQLite · Docker, deployed live.
+            </p>
+            <div class="metric metric-row">
+              <span class="metric-big">5<span class="metric-unit">tools</span></span>
+              <span class="metric-label mono">MCP TOOLS BEHIND A LIVE AGENT LOOP</span>
+            </div>
+            <ul class="tags mono"><li>Agentic Loop</li><li>MCP</li><li>Voice UI</li></ul>
+            <p class="figcap mono">Fig. 3.9 — <a href="https://aria-hotel-receptionist.onrender.com" target="_blank" rel="noopener">Talk to her live</a> · <a href="https://github.com/ShreHari/hotel-voice-receptionist" target="_blank" rel="noopener">source</a>. The LLM never touches the database.</p>
+          </article>
+
+        </div>
+
+        <p class="exp-more reveal">
+          <span class="mono">⤷ Full lab notebooks &amp; source:</span>
+          <a class="arrow-link" href="https://github.com/ShreHari" target="_blank" rel="noopener">github.com/ShreHari</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ §04 INDUSTRIAL DEPLOYMENT ============ -->
+    <section class="section" id="deployment">
+      <div class="section-rail">
+        <span class="section-no mono">§04</span>
+        <h2 class="section-title">Industrial Deployment</h2>
+        <p class="section-sub">Where the lab meets live traffic.</p>
+      </div>
+      <div class="section-body">
+        <article class="job reveal">
+          <header class="job-head">
+            <div>
+              <h3 class="job-role">AI Engineer Intern</h3>
+              <p class="job-org">NexCell Solutions (ConneX) — Remote, United Kingdom</p>
+            </div>
+            <span class="job-dates mono">JUL 2026 — PRESENT</span>
+          </header>
+          <ul class="job-log">
+            <li><span class="log-tick mono">[✓]</span><div class="log-text">Deliver backend features for the shared data and scheduling layer behind <strong>ConneX — a live AI receptionist and CRM platform</strong> for UK letting agencies, in Python / FastAPI / PostgreSQL with async SQLModel &amp; SQLAlchemy.</div></li>
+            <li><span class="log-tick mono">[✓]</span><div class="log-text">Develop the shared <strong>property, booking, maintenance and contact records</strong> that underpin viewings, maintenance and lead capture across every channel.</div></li>
+            <li><span class="log-tick mono">[✓]</span><div class="log-text">Investigate reported <em>and unreported</em> issues, reproduce locally, and fix <strong>root causes rather than symptoms</strong> — every change ships with automated tests through feature branches and pull requests.</div></li>
+            <li><span class="log-tick mono">[✓]</span><div class="log-text">Integrate a <strong>third-party data source</strong> against a live external service, verifying the integration end to end.</div></li>
+          </ul>
+          <p class="figcap mono">Fig. 4.1 — An LLM answers the phone. My job: the data underneath never lies to it.</p>
+        </article>
+
+        <article class="job reveal">
+          <header class="job-head">
+            <div>
+              <h3 class="job-role">Software Engineering Intern</h3>
+              <p class="job-org">Hamiltonian Systems — Coimbatore, India</p>
+            </div>
+            <span class="job-dates mono">JUN — SEP 2024</span>
+          </header>
+          <ul class="job-log">
+            <li><span class="log-tick mono">[✓]</span><div class="log-text">Engineered Python backend services processing <strong>100,000+ structured records weekly</strong> with validated data integrity (Pydantic schemas) across three live, client-facing web applications.</div></li>
+            <li><span class="log-tick mono">[✓]</span><div class="log-text">Shipped <strong>6+ production REST APIs</strong> — JWT authentication, Pydantic validation, structured error-handling middleware — unlocking new cross-system integrations.</div></li>
+            <li><span class="log-tick mono">[✓]</span><div class="log-text">Refactored <strong>8+ relational schemas</strong> through targeted indexing and query restructuring, slashing average latency by <strong>20%</strong> on high-traffic endpoints.</div></li>
+            <li><span class="log-tick mono">[✓]</span><div class="log-text">Mined <strong>50,000+ production log entries</strong> via automated Python scripts, resolving <strong>15+ recurring system failures</strong>; provisioned Grafana dashboards that cut mean time-to-resolution.</div></li>
+            <li><span class="log-tick mono">[✓]</span><div class="log-text">Containerised microservices with Docker inside <strong>2-week Agile sprints</strong> — estimation, backlog refinement, peer code review, iterative release validation.</div></li>
+          </ul>
+          <p class="figcap mono">Fig. 4.2 — Production users are the harshest reviewers. My systems kept them online.</p>
+        </article>
+
+        <p class="next-deploy reveal mono">
+          NEXT DEPLOYMENT: AVAILABLE NOW — <a href="#references">possibly your team →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ §05 HEADLINE RESULTS ============ -->
+    <section class="section" id="results">
+      <div class="section-rail">
+        <span class="section-no mono">§05</span>
+        <h2 class="section-title">Headline Results</h2>
+        <p class="section-sub">Aggregate findings, n = one very persistent engineer.</p>
+      </div>
+      <div class="section-body">
+        <div class="results-grid">
+          <div class="result reveal">
+            <span class="result-big"><span data-count="1">1</span></span>
+            <span class="result-label">IEEE paper accepted<br /><span class="mono">CCPIS 2025</span></span>
+          </div>
+          <div class="result reveal">
+            <span class="result-big"><span data-count="10">10</span></span>
+            <span class="result-label">systems built<br /><span class="mono">RESEARCH → PRODUCTION</span></span>
+          </div>
+          <div class="result reveal">
+            <span class="result-big"><span data-count="100">100</span>K+</span>
+            <span class="result-label">records / week<br /><span class="mono">HAMILTONIAN, 2024</span></span>
+          </div>
+          <div class="result reveal">
+            <span class="result-big">+<span data-count="38">38</span>%</span>
+            <span class="result-label">relative F1 lift<br /><span class="mono">VIA ERROR ANALYSIS</span></span>
+          </div>
+          <div class="result reveal">
+            <span class="result-big"><span data-count="98.2">98.2</span>%</span>
+            <span class="result-label">peak accuracy<br /><span class="mono">SPEAKING-SPEED SVM</span></span>
+          </div>
+          <div class="result reveal">
+            <span class="result-big"><span data-count="2">2</span></span>
+            <span class="result-label">national honours<br /><span class="mono">ISRO · SIH</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ §06 TRAINING & CREDENTIALS ============ -->
+    <section class="section" id="training">
+      <div class="section-rail">
+        <span class="section-no mono">§06</span>
+        <h2 class="section-title">Training &amp; Credentials</h2>
+      </div>
+      <div class="section-body">
+        <article class="edu reveal">
+          <header class="edu-head">
+            <div>
+              <h3 class="edu-degree">MSc Artificial Intelligence</h3>
+              <p class="edu-school">University of Sheffield — Sheffield, UK</p>
+            </div>
+            <span class="edu-dates mono">SEP 2025 — SEP 2026 <span class="edu-flag">(IN PROGRESS)</span></span>
+          </header>
+          <ul class="chips chips-tight">
+            <li class="chip">Machine Learning &amp; Adaptive Intelligence</li>
+            <li class="chip">Deep Learning</li>
+            <li class="chip">Natural Language Processing</li>
+            <li class="chip">Scalable Systems</li>
+            <li class="chip">Data Software Engineering</li>
+            <li class="chip">Applied Mathematics for AI</li>
+            <li class="chip">Speech &amp; Audio Processing</li>
+            <li class="chip chip-strong">Dissertation: Visualising Emotion — submitting Sep 2026</li>
+          </ul>
+        </article>
+
+        <article class="edu reveal">
+          <header class="edu-head">
+            <div>
+              <h3 class="edu-degree">BE Computer Science &amp; Engineering</h3>
+              <p class="edu-school">Anna University — Dr NGP Institute of Technology, India</p>
+            </div>
+            <span class="edu-dates mono">NOV 2021 — APR 2025 · CGPA 7.89/10</span>
+          </header>
+          <ul class="chips chips-tight">
+            <li class="chip">Data Structures &amp; Algorithms</li>
+            <li class="chip">Operating Systems</li>
+            <li class="chip">Databases</li>
+            <li class="chip">Computer Networks</li>
+          </ul>
+        </article>
+
+        <div class="certs reveal">
+          <h3 class="tool-cat mono">APPENDIX A — CERTIFICATIONS</h3>
+          <ol class="cert-list">
+            <li><span class="cert-name">Prompt Engineering for Large Language Models</span><span class="toc-dots"></span><span class="cert-org mono">COURSERA / BE10X</span></li>
+            <li><span class="cert-name">Advanced Business Analytics &amp; Monitoring with Grafana</span><span class="toc-dots"></span><span class="cert-org mono">DR NGP INST. OF TECHNOLOGY</span></li>
+            <li><span class="cert-name">AI &amp; Cybersecurity: Anomaly Detection &amp; Secure Systems</span><span class="toc-dots"></span><span class="cert-org mono">DR NGP INST. OF TECHNOLOGY</span></li>
+            <li><span class="cert-name">Web Development — HTML, CSS, JS, Backend Integration</span><span class="toc-dots"></span><span class="cert-org mono">IIT MADRAS</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ §07 RECOGNITION & SERVICE ============ -->
+    <section class="section" id="recognition">
+      <div class="section-rail">
+        <span class="section-no mono">§07</span>
+        <h2 class="section-title">Recognition &amp; Service</h2>
+      </div>
+      <div class="section-body">
+        <div class="recog-grid">
+          <div class="recog-col reveal">
+            <h3 class="tool-cat mono">HONOURS</h3>
+            <ul class="recog-list">
+              <li>
+                <span class="recog-badge" aria-hidden="true">★</span>
+                <div><strong>World Space Week 2023 — 1st Place, English Extempore</strong><br /><span class="recog-sub">Satish Dhawan Space Centre SHAR, ISRO — Sriharikota</span></div>
+              </li>
+              <li>
+                <span class="recog-badge" aria-hidden="true">★</span>
+                <div><strong>Smart India Hackathon — National Finalist (2023)</strong><br /><span class="recog-sub">Edge-AI fish disease detection, deployed on Raspberry Pi</span></div>
+              </li>
+              <li>
+                <span class="recog-badge" aria-hidden="true">◆</span>
+                <div><strong>Professional memberships</strong><br /><span class="recog-sub">Indian Society for Technical Education (ISTE) · Computer Society of India (CSI)</span></div>
+              </li>
+            </ul>
+          </div>
+          <div class="recog-col reveal">
+            <h3 class="tool-cat mono">LEADERSHIP &amp; VOLUNTEERING</h3>
+            <ul class="recog-list">
+              <li>
+                <span class="recog-badge" aria-hidden="true">▸</span>
+                <div><strong>Engineering team lead — 4 members</strong><br /><span class="recog-sub">Assigned workstreams, tracked milestones, zero missed deadlines</span></div>
+              </li>
+              <li>
+                <span class="recog-badge" aria-hidden="true">▸</span>
+                <div><strong>Elected Class Representative — cohort of 60+</strong><br /><span class="recog-sub">Primary liaison between faculty and peers for academic planning</span></div>
+              </li>
+              <li>
+                <span class="recog-badge" aria-hidden="true">▸</span>
+                <div><strong>UNICEF outreach campaign lead</strong><br /><span class="recog-sub">250+ participants across a UNICEF fundraising campaign · 3 community aid camps · 2 blood-donation drives · 5 technical sessions incl. a TED-style talk</span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ §08 AI-NATIVE WORKFLOW ============ -->
+    <section class="section" id="aistack">
+      <div class="section-rail">
+        <span class="section-no mono">§08</span>
+        <h2 class="section-title">AI-Native Workflow</h2>
+        <p class="section-sub">I don't just study AI. I work inside it, daily.</p>
+      </div>
+      <div class="section-body">
+        <p class="prose reveal">
+          The best engineers of this decade will treat AI as a collaborator whose work still gets reviewed —
+          accelerated by it, never blindly trusting it. I build agentic systems by day (EXP.10 runs on a
+          hand-written agent loop over MCP) and work inside AI tooling the rest of the time. My daily stack:
+        </p>
+        <div class="ai-grid">
+          <div class="ai-item reveal">
+            <span class="ai-name">Claude &amp; Claude Code</span>
+            <span class="ai-use mono">PAIR-PROGRAMMING · CODE REVIEW · THIS VERY SITE</span>
+          </div>
+          <div class="ai-item reveal">
+            <span class="ai-name">GitHub Copilot</span>
+            <span class="ai-use mono">IN-EDITOR COMPLETION &amp; BOILERPLATE</span>
+          </div>
+          <div class="ai-item reveal">
+            <span class="ai-name">HuggingFace Hub</span>
+            <span class="ai-use mono">MODEL SELECTION · FINE-TUNING · EVAL HARNESSES</span>
+          </div>
+          <div class="ai-item reveal">
+            <span class="ai-name">ChatGPT &amp; Gemini</span>
+            <span class="ai-use mono">LITERATURE TRIAGE · RUBBER-DUCK DEBUGGING</span>
+          </div>
+          <div class="ai-item reveal">
+            <span class="ai-name">Prompt Engineering</span>
+            <span class="ai-use mono">CERTIFIED — STRUCTURED PROMPTING &amp; EVALS</span>
+          </div>
+          <div class="ai-item reveal">
+            <span class="ai-name">Verification habit</span>
+            <span class="ai-use mono">EVERY AI OUTPUT TESTED BEFORE TRUSTED</span>
+          </div>
+        </div>
+        <p class="figcap mono reveal">Fig. 8.1 — Full disclosure: an AI helped build this page. The judgment calls were mine.</p>
+      </div>
+    </section>
+
+    <!-- ============ §09 FUTURE WORK ============ -->
+    <section class="section" id="futurework">
+      <div class="section-rail">
+        <span class="section-no mono">§09</span>
+        <h2 class="section-title">Future Work</h2>
+        <p class="section-sub">Open problems on my bench.</p>
+      </div>
+      <div class="section-body">
+        <ul class="future-list">
+          <li class="reveal"><span class="future-no mono">9.1</span><div class="future-text">Agentic systems &amp; tool-using LLMs — beyond chat, toward autonomous evaluation loops.</div></li>
+          <li class="reveal"><span class="future-no mono">9.2</span><div class="future-text">Distributed training at real scale — carrying the Spark patterns from COM6012 beyond coursework-sized clusters.</div></li>
+          <li class="reveal"><span class="future-no mono">9.3</span><div class="future-text">Speech &amp; audio deep learning — extending handcrafted-DSP intuition to end-to-end models.</div></li>
+          <li class="reveal"><span class="future-no mono">9.4</span><div class="future-text">MSc dissertation — <em>Visualising Emotion: Text &amp; Image Analysis of Human Feelings</em> (EXP.08). Human-rater validation study drafted; final results and submission 16 September 2026.</div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ §10 REFERENCES & CONTACT ============ -->
+    <section class="section section-contact" id="references">
+      <div class="section-rail">
+        <span class="section-no mono">§10</span>
+        <h2 class="section-title">References &amp; Contact</h2>
+      </div>
+      <div class="section-body">
+        <p class="contact-lede reveal">
+          Hiring for ML, backend or research-adjacent engineering?<br />
+          <em>Correspondence is welcome.</em>
+        </p>
+
+        <div class="contact-actions reveal">
+          <a class="btn btn-primary" href="mailto:shrehari66@gmail.com">✉&nbsp; shrehari66@gmail.com</a>
+          <a class="btn" href="https://linkedin.com/in/shrehari" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="btn" href="https://github.com/ShreHari" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn" href="tel:+447899740275">+44 7899 740275</a>
+        </div>
+
+        <div class="cite reveal">
+          <div class="cite-head">
+            <h3 class="tool-cat mono">REFERENCES</h3>
+          </div>
+          <p class="cite-block mono" style="white-space: normal">[1]&nbsp;&nbsp;P. Shre Hari, &ldquo;Real Time Disease Monitoring and Alert System for Public Health Safety,&rdquo; in <em>Proc. 2nd Int. Conf. on Circuits, Power and Intelligent Systems (CCPIS)</em>, 2025.</p>
+        </div>
+
+        <div class="cite reveal">
+          <div class="cite-head">
+            <h3 class="tool-cat mono">CITE THIS HUMAN</h3>
+            <button class="btn btn-small" id="copyBibtex">COPY BIBTEX</button>
+          </div>
+          <pre class="cite-block mono" id="bibtexBlock">@misc{anandh2026portfolio,
+  author       = {Anandh, Shre Hari Prem},
+  title        = {Learning Systems That Ship: Portfolio of an {MSc} {AI} Candidate},
+  year         = {2026},
+  howpublished = {\url{https://shrehari.github.io/}},
+  note         = {Peer-reviewed at IEEE CCPIS 2025. Replies quickly.}
+}</pre>
+          <span class="visually-hidden" role="status" id="copyStatus"></span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-line mono">END OF DOCUMENT — THANK YOU, REVIEWER №<span id="reviewerNo">2</span></p>
+      <p class="colophon">
+        Set in <em>Fraunces</em>, <em>Archivo</em> &amp; <em>Spline Sans Mono</em>. Hand-built with vanilla HTML/CSS/JS —
+        no frameworks, one accent colour, and a healthy amount of AI pair-programming.
+      </p>
+      <p class="colophon mono">© <span id="year">2026</span> SHRE HARI PREM ANANDH · REV 2026.08 · SHEFFIELD, UK · <a href="#top">BACK TO TITLE PAGE ↑</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

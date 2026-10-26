@@ -907,11 +907,11 @@ a:focus-visible, button:focus-visible {
 }
 .build-notes .bn-key { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.08em; color: var(--accent); padding-top: 3px; }
 @media (max-width: 760px) {
-  .shot-grid { grid-template-columns: 1fr; }
+  .shot-grid { grid-template-columns: minmax(0, 1fr); }
   .build-notes li { grid-template-columns: 1fr; gap: 2px; }
   .evalbars li { grid-template-columns: 7.5em minmax(0, 1fr) 3em; }
 }
-.shot-grid-wide { grid-template-columns: 1fr; gap: 0; }
+.shot-grid-wide { grid-template-columns: minmax(0, 1fr); gap: 0; }
 @media (max-width: 760px) {
   .arch .shot-panel { overflow-x: auto; }
   .arch svg { min-width: 560px; }

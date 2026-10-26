@@ -1,7 +1,7 @@
 # Shre Hari Prem Anandh — Portfolio
 
 **Concept: "A Living Research Paper."** The whole site is designed as a preprint about its author —
-abstract, numbered sections (§01–§10), experiments with figure captions, rubber stamps, and a
+abstract, numbered sections (§01–§09), experiments with figure captions, rubber stamps, and a
 BibTeX block. Editorial paper aesthetic, not a template.
 
 Pure HTML + CSS + vanilla JS. **No build step, no frameworks, no dependencies.**
@@ -13,13 +13,13 @@ PORTFOLIO/
 ├── css/style.css     ← all design lives here (design tokens at the top)
 ├── js/main.js        ← interactions (10 independent blocks — delete any safely)
 └── assets/
-    └── profile.jpg   ← DROP YOUR HEADSHOT HERE (4:5 portrait works best)
+    ├── profile.jpg   ← headshot (shown in grayscale, cropped to 4:5)
+    ├── og-card.png   ← 1200×630 link preview for LinkedIn / X / Slack
+    └── work/         ← project screenshots and charts
 ```
 
-## First thing to do
-
-Save your black-and-white headshot as `assets/profile.jpg`. Until it exists, the site
-shows an elegant "PLATE I — IMAGE PENDING" placeholder automatically.
+If `assets/profile.jpg` is ever missing, the site falls back to a
+"PLATE I — FIGURE OMITTED FROM REVIEWER COPY" placeholder automatically.
 
 ## How to customise
 
@@ -27,7 +27,7 @@ shows an elegant "PLATE I — IMAGE PENDING" placeholder automatically.
 | -------------------------- | ------------------------------------------------------------------- |
 | Accent colour (one knob!)  | `--accent` in `css/style.css` `:root` (and the dark variant below) |
 | Fonts                      | The Google Fonts `<link>` in `index.html` + `--font-*` tokens       |
-| Any text / numbers         | `index.html` — sections are clearly commented `§01 … §10`           |
+| Any text / numbers         | `index.html` — sections are clearly commented `§01 … §09`           |
 | Dark-mode palette          | `[data-theme="dark"]` block at the top of `css/style.css`           |
 
 ## How to add a new project (Experiment)
@@ -50,18 +50,14 @@ Copy any `<section class="section" id="…">` block. The pattern is always:
 `section-rail` (number + title on the left) + `section-body` (content on the right).
 Give it the next § number and add a row to the hero's Table of Contents.
 
-## Deploy (GitHub Pages, free)
+## Deploy
 
-```bash
-cd ~/Desktop/PORTFOLIO
-git init && git add -A && git commit -m "Portfolio v1"
-# create a repo named  shrehari.github.io  (or any repo + enable Pages)
-git remote add origin https://github.com/ShreHari/shrehari.github.io.git
-git push -u origin main
-```
+GitHub Pages serves this repo's `main` branch at `https://shrehari.github.io`. Push to
+`main` and the site updates within a minute or two.
 
-Then visit `https://shrehari.github.io`. Afterwards, update the `url` field in the
-BibTeX block and the `og:` meta tags.
+The link preview (`assets/og-card.png`) is a static image, so update it when your
+headline or role changes. LinkedIn caches previews; paste the URL into its
+Post Inspector to refresh one.
 
 ## Built-in details worth knowing
 

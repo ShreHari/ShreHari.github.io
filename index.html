@@ -10,9 +10,12 @@
   <meta property="og:description" content="MSc AI @ Sheffield · AI Engineer Intern @ NexCell Solutions · AgentForge, live on GKE · IEEE CCPIS 2025 · Portfolio formatted as a preprint about its author." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://shrehari.github.io/" />
-  <meta property="og:image" content="https://shrehari.github.io/assets/profile.jpg" />
-  <meta property="og:image:alt" content="Shre Hari Prem Anandh — MSc AI, University of Sheffield" />
+  <meta property="og:image" content="https://shrehari.github.io/assets/og-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Shre Hari Prem Anandh — AI engineer, MSc AI, University of Sheffield" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://shrehari.github.io/assets/og-card.png" />
   <link rel="canonical" href="https://shrehari.github.io/" />
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3efe6" />
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#131210" />
@@ -66,7 +69,7 @@
     <nav class="topnav" aria-label="Primary">
       <a href="#introduction" data-section="introduction">§01 Intro</a>
       <a href="#experiments" data-section="experiments">§03 Experiments</a>
-      <a href="#results" data-section="results">§05 Results</a>
+      <a href="#deployment" data-section="deployment">§04 Industry</a>
       <a href="#references" data-section="references">Contact</a>
     </nav>
     <button class="theme-toggle" id="themeToggle">
@@ -97,24 +100,6 @@
               S. H. P. Anandh<sup>1,2,3</sup>&nbsp;&nbsp;·&nbsp;&nbsp;<sup>1</sup>University of Sheffield, MSc Artificial Intelligence&nbsp;&nbsp;·&nbsp;&nbsp;<sup>2</sup>NexCell Solutions&nbsp;&nbsp;·&nbsp;&nbsp;<sup>3</sup>formerly Hamiltonian Systems
             </p>
 
-            <div class="abstract">
-              <h2 class="abstract-label mono">Abstract</h2>
-              <p>
-                MSc Artificial Intelligence, <strong>University of Sheffield</strong> (Sep 2026), and
-                <strong>AI Engineer Intern at NexCell Solutions</strong>, where I ship a production WhatsApp AI
-                agent that books and reschedules property viewings through MCP tools: <strong>600+ commits</strong>,
-                199 test files, every change through CI and review. In my own time I built
-                <strong><a href="#agentforge">AgentForge</a></strong>, a job-hunt agent now <strong>live on Google
-                Kubernetes Engine</strong>: a LangGraph workflow behind a Pub/Sub queue, crash recovery, graceful
-                shutdown, <strong>15/15</strong> on its evals and <strong>128</strong> automated tests, built solo in
-                two weeks. First-author <strong>IEEE</strong> paper (CCPIS 2025), a <strong>25%</strong> cut in false
-                alerts, and a dissertation that measured whether AI images carry the feeling in a prompt.
-              </p>
-              <p class="abstract-keywords mono">
-                <span class="kw-label">Keywords —</span> AI agents · LangGraph &amp; LangChain · production backends · Kubernetes on GCP · evals &amp; guardrails · model evaluation · NLP
-              </p>
-            </div>
-
             <div class="hero-meta">
               <div class="meta-item">
                 <span class="meta-key mono">STATUS</span>
@@ -134,6 +119,20 @@
                   <a href="https://34-102-210-23.sslip.io" target="_blank" rel="noopener">AgentForge (live)</a><span class="sep">/</span><a href="https://github.com/ShreHari" target="_blank" rel="noopener">GitHub</a><span class="sep">/</span><a href="https://linkedin.com/in/shrehari" target="_blank" rel="noopener">LinkedIn</a>
                 </span>
               </div>
+            </div>
+
+            <div class="abstract">
+              <h2 class="abstract-label mono">Abstract</h2>
+              <p>
+                MSc Artificial Intelligence, University of Sheffield (Sep 2026), and <strong>AI Engineer Intern at
+                NexCell Solutions</strong>, where I ship a production WhatsApp AI agent that books property viewings
+                through MCP tools. In my own time I built <strong><a href="#agentforge">AgentForge</a></strong>, a
+                job-hunt agent now live on Google Kubernetes Engine, with crash recovery, evals and 128 automated
+                tests, solo in two weeks. I'm also first author of a <strong>peer-reviewed IEEE paper</strong> (CCPIS 2025).
+              </p>
+              <p class="abstract-keywords mono">
+                <span class="kw-label">Keywords —</span> AI agents · LangGraph &amp; LangChain · production backends · Kubernetes on GCP · evals &amp; guardrails · model evaluation · NLP
+              </p>
             </div>
           </div>
 
@@ -163,12 +162,11 @@
                 <li><a href="#method"><span class="toc-name">Apparatus &amp; Method</span><span class="toc-dots"></span><span class="toc-num mono">§02</span></a></li>
                 <li><a href="#experiments"><span class="toc-name">Experiments</span><span class="toc-dots"></span><span class="toc-num mono">§03</span></a></li>
                 <li><a href="#deployment"><span class="toc-name">Industrial Deployment</span><span class="toc-dots"></span><span class="toc-num mono">§04</span></a></li>
-                <li><a href="#results"><span class="toc-name">Headline Results</span><span class="toc-dots"></span><span class="toc-num mono">§05</span></a></li>
-                <li><a href="#training"><span class="toc-name">Training &amp; Credentials</span><span class="toc-dots"></span><span class="toc-num mono">§06</span></a></li>
-                <li><a href="#recognition"><span class="toc-name">Recognition &amp; Service</span><span class="toc-dots"></span><span class="toc-num mono">§07</span></a></li>
-                <li><a href="#aistack"><span class="toc-name">AI-Native Workflow</span><span class="toc-dots"></span><span class="toc-num mono">§08</span></a></li>
-                <li><a href="#futurework"><span class="toc-name">Future Work</span><span class="toc-dots"></span><span class="toc-num mono">§09</span></a></li>
-                <li><a href="#references"><span class="toc-name">References &amp; Contact</span><span class="toc-dots"></span><span class="toc-num mono">§10</span></a></li>
+                <li><a href="#training"><span class="toc-name">Training &amp; Credentials</span><span class="toc-dots"></span><span class="toc-num mono">§05</span></a></li>
+                <li><a href="#recognition"><span class="toc-name">Recognition &amp; Service</span><span class="toc-dots"></span><span class="toc-num mono">§06</span></a></li>
+                <li><a href="#aistack"><span class="toc-name">AI-Native Workflow</span><span class="toc-dots"></span><span class="toc-num mono">§07</span></a></li>
+                <li><a href="#futurework"><span class="toc-name">Future Work</span><span class="toc-dots"></span><span class="toc-num mono">§08</span></a></li>
+                <li><a href="#references"><span class="toc-name">References &amp; Contact</span><span class="toc-dots"></span><span class="toc-num mono">§09</span></a></li>
               </ol>
             </nav>
           </aside>
@@ -188,7 +186,7 @@
         <span>IEEE CCPIS 2025 — peer-reviewed</span><span class="tick-sep">◆</span>
         <span>sub-second edge inference on Raspberry Pi</span><span class="tick-sep">◆</span>
         <span>World Space Week 2023 — 1st place, ISRO SDSC SHAR</span><span class="tick-sep">◆</span>
-        <span>Smart India Hackathon finalist</span><span class="tick-sep">◆</span><span class="tick-sep">◆</span>
+        <span>Smart India Hackathon finalist</span><span class="tick-sep">◆</span>
       </div>
     </div>
 
@@ -394,7 +392,7 @@
                 workers stop between steps and hand the run back, so a rolling deploy drops nothing.
               </p>
               <p class="exp-pub mono">
-                ⤷ Live at <a href="https://34-102-210-23.sslip.io" target="_blank" rel="noopener">34-102-210-23.sslip.io</a> (Google sign-in; the app is in testing, so ask me to add your Gmail) · <a href="https://github.com/ShreHari/agentforge" target="_blank" rel="noopener">source, README &amp; eval reports</a>
+                ⤷ Live at <a href="https://34-102-210-23.sslip.io" target="_blank" rel="noopener">34-102-210-23.sslip.io</a> (sign in with any Google account) · <a href="https://github.com/ShreHari/agentforge" target="_blank" rel="noopener">source, README &amp; eval reports</a>
               </p>
               <ul class="tags mono">
                 <li>LangGraph</li><li>LangChain</li><li>Deep Agents</li><li>Gemini</li><li>FastAPI</li><li>GKE Autopilot</li><li>Cloud SQL</li><li>Pub/Sub</li><li>Docker</li>
@@ -803,47 +801,10 @@
       </div>
     </section>
 
-    <!-- ============ §05 HEADLINE RESULTS ============ -->
-    <section class="section" id="results">
-      <div class="section-rail">
-        <span class="section-no mono">§05</span>
-        <h2 class="section-title">Headline Results</h2>
-        <p class="section-sub">Aggregate findings, n = one very persistent engineer.</p>
-      </div>
-      <div class="section-body">
-        <div class="results-grid">
-          <div class="result reveal">
-            <span class="result-big"><span data-count="1">1</span></span>
-            <span class="result-label">IEEE paper accepted<br /><span class="mono">CCPIS 2025</span></span>
-          </div>
-          <div class="result reveal">
-            <span class="result-big"><span data-count="11">11</span></span>
-            <span class="result-label">systems built<br /><span class="mono">RESEARCH → PRODUCTION</span></span>
-          </div>
-          <div class="result reveal">
-            <span class="result-big">15/15</span>
-            <span class="result-label">eval cases, twice<br /><span class="mono">AGENTFORGE, LIVE ON GKE</span></span>
-          </div>
-          <div class="result reveal">
-            <span class="result-big">+<span data-count="38">38</span>%</span>
-            <span class="result-label">relative F1 lift<br /><span class="mono">VIA ERROR ANALYSIS</span></span>
-          </div>
-          <div class="result reveal">
-            <span class="result-big"><span data-count="600">600</span>+</span>
-            <span class="result-label">production commits<br /><span class="mono">NEXCELL, 2026</span></span>
-          </div>
-          <div class="result reveal">
-            <span class="result-big"><span data-count="2">2</span></span>
-            <span class="result-label">national honours<br /><span class="mono">ISRO · SIH</span></span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ §06 TRAINING & CREDENTIALS ============ -->
+    <!-- ============ §05 TRAINING & CREDENTIALS ============ -->
     <section class="section" id="training">
       <div class="section-rail">
-        <span class="section-no mono">§06</span>
+        <span class="section-no mono">§05</span>
         <h2 class="section-title">Training &amp; Credentials</h2>
       </div>
       <div class="section-body">
@@ -896,10 +857,10 @@
       </div>
     </section>
 
-    <!-- ============ §07 RECOGNITION & SERVICE ============ -->
+    <!-- ============ §06 RECOGNITION & SERVICE ============ -->
     <section class="section" id="recognition">
       <div class="section-rail">
-        <span class="section-no mono">§07</span>
+        <span class="section-no mono">§06</span>
         <h2 class="section-title">Recognition &amp; Service</h2>
       </div>
       <div class="section-body">
@@ -942,10 +903,10 @@
       </div>
     </section>
 
-    <!-- ============ §08 AI-NATIVE WORKFLOW ============ -->
+    <!-- ============ §07 AI-NATIVE WORKFLOW ============ -->
     <section class="section" id="aistack">
       <div class="section-rail">
-        <span class="section-no mono">§08</span>
+        <span class="section-no mono">§07</span>
         <h2 class="section-title">AI-Native Workflow</h2>
         <p class="section-sub">I don't just study AI. I work inside it, daily.</p>
       </div>
@@ -982,31 +943,31 @@
             <span class="ai-use mono">EVERY AI OUTPUT TESTED BEFORE TRUSTED</span>
           </div>
         </div>
-        <p class="figcap mono reveal">Fig. 8.1 — Full disclosure: an AI helped build this page. The judgment calls were mine.</p>
+        <p class="figcap mono reveal">Fig. 7.1 — Full disclosure: an AI helped build this page. The judgment calls were mine.</p>
       </div>
     </section>
 
-    <!-- ============ §09 FUTURE WORK ============ -->
+    <!-- ============ §08 FUTURE WORK ============ -->
     <section class="section" id="futurework">
       <div class="section-rail">
-        <span class="section-no mono">§09</span>
+        <span class="section-no mono">§08</span>
         <h2 class="section-title">Future Work</h2>
         <p class="section-sub">Open problems on my bench.</p>
       </div>
       <div class="section-body">
         <ul class="future-list">
-          <li class="reveal"><span class="future-no mono">9.1</span><div class="future-text">Load-test AgentForge in stages up to 1,000 virtual users, then publish what breaks first and what the numbers do not prove.</div></li>
-          <li class="reveal"><span class="future-no mono">9.2</span><div class="future-text">The low-code layer: let people clone the Job Hunt agent and edit its spec to build their own.</div></li>
-          <li class="reveal"><span class="future-no mono">9.3</span><div class="future-text">CI before every deploy, and scaling workers on queue backlog with KEDA.</div></li>
-          <li class="reveal"><span class="future-no mono">9.4</span><div class="future-text">Go and Temporal, for durable workflows beyond what checkpoints alone give you.</div></li>
+          <li class="reveal"><span class="future-no mono">8.1</span><div class="future-text">Load-test AgentForge in stages up to 1,000 virtual users, then publish what breaks first and what the numbers do not prove.</div></li>
+          <li class="reveal"><span class="future-no mono">8.2</span><div class="future-text">The low-code layer: let people clone the Job Hunt agent and edit its spec to build their own.</div></li>
+          <li class="reveal"><span class="future-no mono">8.3</span><div class="future-text">CI before every deploy, and scaling workers on queue backlog with KEDA.</div></li>
+          <li class="reveal"><span class="future-no mono">8.4</span><div class="future-text">Go and Temporal, for durable workflows beyond what checkpoints alone give you.</div></li>
         </ul>
       </div>
     </section>
 
-    <!-- ============ §10 REFERENCES & CONTACT ============ -->
+    <!-- ============ §09 REFERENCES & CONTACT ============ -->
     <section class="section section-contact" id="references">
       <div class="section-rail">
-        <span class="section-no mono">§10</span>
+        <span class="section-no mono">§09</span>
         <h2 class="section-title">References &amp; Contact</h2>
       </div>
       <div class="section-body">

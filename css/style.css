@@ -862,3 +862,57 @@ a:focus-visible, button:focus-visible {
   a { text-decoration: none; }
   .contact-actions a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; }
 }
+
+/* ---------- 13. SHOWCASE FIGURES (REV 2026.10) ---------- */
+.shot { margin-top: 22px; }
+.shot img {
+  display: block; width: 100%; height: auto;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--panel-deep);
+}
+.shot figcaption {
+  margin-top: 8px; color: var(--ink-faint);
+  font-family: var(--font-mono); font-size: 0.68rem; font-style: italic; letter-spacing: 0.03em;
+}
+.shot figcaption a { color: var(--accent); }
+.shot-grid {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px; align-items: start;
+}
+.shot-grid .shot { margin-top: 22px; }
+.shot-panel {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--panel-deep); padding: 16px 16px 12px;
+}
+.arch svg { display: block; width: 100%; height: auto; }
+.arch .box { fill: var(--panel); stroke: var(--line); stroke-width: 1.2; }
+.arch .box-hot { stroke: var(--accent); }
+.arch text { fill: var(--ink); font-family: var(--font-mono); font-size: 11px; }
+.arch .sub { fill: var(--ink-faint); font-size: 9.5px; }
+.arch .wire { stroke: var(--ink-faint); stroke-width: 1.2; fill: none; }
+.arch .wire-hot { stroke: var(--accent); }
+.arch .tip { fill: var(--ink-faint); }
+.evalbars { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.evalbars li { display: grid; grid-template-columns: 9.5em minmax(0, 1fr) 3.4em; gap: 10px; align-items: center; }
+.evalbars .eb-name { font-family: var(--font-mono); font-size: 0.66rem; color: var(--ink-soft); }
+.evalbars .eb-track { height: 10px; background: var(--line-soft); border-radius: 999px; overflow: hidden; }
+.evalbars .eb-fill { display: block; height: 100%; background: var(--accent); border-radius: 999px; }
+.evalbars .eb-score { font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink); text-align: right; }
+.evalbars .eb-gap { margin-top: 4px; }
+.build-notes { list-style: none; margin-top: 18px; }
+.build-notes li {
+  display: grid; grid-template-columns: 8.5em minmax(0, 1fr); gap: 14px;
+  padding: 9px 0; font-size: 0.9rem; color: var(--ink-soft);
+  border-top: 1px dashed var(--line-soft);
+}
+.build-notes .bn-key { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.08em; color: var(--accent); padding-top: 3px; }
+@media (max-width: 760px) {
+  .shot-grid { grid-template-columns: 1fr; }
+  .build-notes li { grid-template-columns: 1fr; gap: 2px; }
+  .evalbars li { grid-template-columns: 7.5em minmax(0, 1fr) 3em; }
+}
+.shot-grid-wide { grid-template-columns: 1fr; gap: 0; }
+@media (max-width: 760px) {
+  .arch .shot-panel { overflow-x: auto; }
+  .arch svg { min-width: 560px; }
+}

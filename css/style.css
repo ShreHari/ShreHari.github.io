@@ -275,7 +275,8 @@ a:focus-visible, button:focus-visible {
 }
 .plate-frame:hover { transform: rotate(0deg) translateY(-3px); }
 .plate-frame img {
-  width: 100%; aspect-ratio: 4 / 5; object-fit: cover;
+  /* height:auto stops the img height="1000" attribute from overriding the 4:5 ratio */
+  width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover;
   object-position: 50% 28%; /* square source in a 4:5 frame — keep the face high */
   filter: grayscale(1) contrast(1.06) brightness(1.02);
 }
